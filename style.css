@@ -1,115 +1,69 @@
-/* 共通スタイル */
+/* フォント設定とベースカラー */
 body {
+  font-family: 'Lora', 'Merriweather', serif;
+  background-color: #f5f0e6;
+  color: #3b2f2f;
   margin: 0;
-  font-family: 'Yu Gothic', sans-serif;
+  padding: 0;
   line-height: 1.6;
-  color: #333;
-  background: #fff;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ヘッダー */
-.header {
+/* ヘッダーとフッター */
+.header, .footer {
+  background-color: #3b2f2f;
+  color: #f5f0e6;
   padding: 20px 0;
-  background-color: #fff0f5;
   text-align: center;
-  border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  font-size: 1.5rem;
+.logo, .footer-logo {
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #b35b7a;
 }
 
-/* ファーストビュー */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #fffafc;
-}
-
-.main-copy {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
-  color: #7a3e4e;
-}
-
-.sub-copy {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1.5em;
-}
-
-.hero-image {
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
+/* CTAボタン */
 .cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #b35b7a;
+  background-color: #7b2f3b;
   color: #fff;
-  border-radius: 30px;
+  padding: 12px 24px;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
 .cta-button:hover {
-  background-color: #993f60;
+  background-color: #5a1f2c;
+}
+
+/* セクション共通 */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* ストーリーセクション */
-.story {
-  padding: 60px 20px;
-  background-color: #fff;
-}
-
 .story-flex {
   display: flex;
+  justify-content: space-between;
   gap: 40px;
   align-items: center;
-  justify-content: center;
 }
 
-.story-text h3 {
-  font-size: 1.5rem;
-  color: #b35b7a;
-  margin-bottom: 0.5em;
+.story-text {
+  flex: 1;
 }
 
-.story-text p {
-  font-size: 1rem;
-  color: #444;
+.story-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* シチュエーションカード */
-.situations {
-  padding: 60px 20px;
-  background-color: #fef6f9;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 1.8rem;
-  color: #b35b7a;
-  margin-bottom: 2em;
-}
-
+/* カード（シチュエーション提案） */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -117,86 +71,70 @@ img {
 }
 
 .card {
-  background: #fff;
+  background-color: #fff8f0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 16px;
+  margin-bottom: 12px;
 }
 
-.card h4 {
-  font-size: 1.2rem;
-  margin: 0.8em 0 0.3em;
-  color: #7a3e4e;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* キャンペーン */
-.campaign {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.share-buttons a {
-  margin: 0 8px;
-  text-decoration: none;
-  color: #b35b7a;
+.card-title {
+  font-size: 1.1rem;
   font-weight: bold;
+  margin-bottom: 8px;
+  color: #5a1f2c;
 }
 
-/* コンバージョン */
-.conversion {
-  padding: 60px 20px;
-  background-color: #fffafc;
-  text-align: center;
+/* Instagram風投稿セクション */
+.insta-mock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
-.message {
-  font-size: 1.3rem;
-  color: #444;
-  margin-bottom: 1.2em;
+.insta-mock img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.cta-group a {
-  margin: 10px;
-}
-
-/* フッター */
-.footer {
-  padding: 40px 20px;
-  background-color: #f8e9ee;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-}
-
+/* フッターリンク */
 .footer-links {
   display: flex;
-  justify-content: center;
   gap: 16px;
+  justify-content: center;
   margin-top: 12px;
 }
 
 .footer-links a {
-  color: #b35b7a;
+  color: #f5f0e6;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-/* レスポンシブ */
+/* レスポンシブ対応 */
 @media (max-width: 1024px) {
   .story-flex {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
   .card-grid {
@@ -205,26 +143,23 @@ img {
 }
 
 @media (max-width: 768px) {
-  .main-copy {
-    font-size: 1.5rem;
-  }
-
-  .sub-copy {
-    font-size: 1rem;
-  }
-
   .card-grid {
     grid-template-columns: 1fr;
   }
 
-  .cta-group {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .insta-mock img {
+    width: 45%;
+    height: auto;
   }
 
   .footer-links {
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
   }
 }
+
