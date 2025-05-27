@@ -1,69 +1,119 @@
-/* フォント設定とベースカラー */
-body {
-  font-family: 'Lora', 'Merriweather', serif;
-  background-color: #f5f0e6;
-  color: #3b2f2f;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+/* Reset & ベース */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
 }
 
-/* ヘッダーとフッター */
-.header, .footer {
-  background-color: #3b2f2f;
-  color: #f5f0e6;
-  padding: 20px 0;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff0f6; /* 淡いピンク */
+  color: #4a3c42; /* ダークブラウン系 */
+  line-height: 1.6;
   text-align: center;
 }
 
-.logo, .footer-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ヘッダー */
+.header {
+  background-color: #f9d5e5; /* 薄いピンク */
+  padding: 20px 0;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #7a3e48; /* ワインレッド系 */
+}
+
+/* ファーストビュー */
+.hero {
+  padding: 40px 20px;
+}
+
+.main-copy {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #7a3e48;
+  margin-bottom: 12px;
+}
+
+.sub-copy {
+  font-size: 1.2rem;
+  color: #a1636e;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(122, 62, 72, 0.3);
+  margin-bottom: 24px;
 }
 
 /* CTAボタン */
 .cta-button {
-  background-color: #7b2f3b;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
   display: inline-block;
+  background-color: #7a3e48;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .cta-button:hover {
-  background-color: #5a1f2c;
-}
-
-/* セクション共通 */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  background-color: #53262e;
 }
 
 /* ストーリーセクション */
-.story-flex {
+.story {
+  background-color: #fff6f9;
+  padding: 40px 20px;
+}
+
+.story-content {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
   align-items: center;
+  gap: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-.story-text {
-  flex: 1;
+.story-content .text {
+  flex: 1 1 300px;
+  font-size: 1.1rem;
+  color: #4a3c42;
 }
 
-.story-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.story-content .image {
+  flex: 1 1 300px;
 }
 
-/* カード（シチュエーション提案） */
+/* シチュエーションカード */
+.situations {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.situations h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #7a3e48;
+  margin-bottom: 32px;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -71,70 +121,131 @@ section {
 }
 
 .card {
-  background-color: #fff8f0;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  background-color: #fff0f6;
   padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(122, 62, 72, 0.15);
   text-align: center;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 12px;
+.card h4 {
+  color: #7a3e48;
+  margin: 16px 0 8px;
+  font-family: 'Playfair Display', serif;
 }
 
-.card-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #5a1f2c;
+.card p {
+  font-size: 0.95rem;
+  color: #a1636e;
 }
 
-/* Instagram風投稿セクション */
+/* 参加型キャンペーン */
+.campaign {
+  padding: 40px 20px;
+  background-color: #fff6f9;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.campaign h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #7a3e48;
+  margin-bottom: 24px;
+}
+
 .insta-mock {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
   justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-.insta-mock img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
+.campaign-cta {
+  margin-bottom: 20px;
 }
 
-/* フッターリンク */
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.share-buttons a {
+  color: #7a3e48;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.share-buttons a:hover {
+  text-decoration: underline;
+}
+
+/* コンバージョン誘導 */
+.conversion {
+  padding: 40px 20px;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.conversion h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #7a3e48;
+  margin-bottom: 24px;
+}
+
+.conversion .cta-button {
+  margin: 12px 12px 0;
+}
+
+/* フッター */
+.footer {
+  background-color: #7a3e48;
+  color: #f5f0e6;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
 .footer-links {
   display: flex;
-  gap: 16px;
   justify-content: center;
+  gap: 20px;
   margin-top: 12px;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
   color: #f5f0e6;
   text-decoration: none;
-  font-size: 0.9rem;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-/* レスポンシブ対応 */
+/* フェードイン用 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* レスポンシブ */
 @media (max-width: 1024px) {
-  .story-flex {
+  .story-content {
     flex-direction: column;
-    text-align: center;
   }
 
   .card-grid {
@@ -142,24 +253,52 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .card-grid {
     grid-template-columns: 1fr;
   }
 
   .cta-button {
     width: 100%;
-    text-align: center;
+    padding: 14px 0;
   }
 
-  .insta-mock img {
-    width: 45%;
-    height: auto;
-  }
-
-  .footer-links {
+  .insta-mock {
     flex-direction: column;
-    align-items: center;
+    gap: 12px;
   }
 }
+/* モーダルスタイル */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff0f6;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(122, 62, 72, 0.3);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #7a3e48;
+}
+
+/* フェードインクラスは前述済み */
+
+
 
