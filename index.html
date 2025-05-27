@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="“ひとり”を、“ひととき”に変える。忙しい日常の中で味わう、お酒との静かな時間を提案する架空のライフスタイルLP。">
+  <meta name="keywords" content="お酒, ワイン, ライフスタイル, リラックス, 一人時間">
+  <meta name="author" content="わたしのお酒時間">
+  <title>#わたしのお酒時間｜架空LP</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 1024px) {
+      .story-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .story-text, .story-image {
+        width: 100%;
+        text-align: center;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-copy {
+        font-size: 1.5rem;
+      }
+
+      .sub-copy {
+        font-size: 1rem;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .hero-image, .insta-mock img {
+        width: 100%;
+        height: auto;
+      }
+
+      .cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">わたしのお酒時間</h1>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2 class="main-copy">“ひとり”を、“ひととき”に変える魔法。</h2>
+      <p class="sub-copy">一日の終わりに、ささやかな贅沢を。</p>
+      <img src="images/hero.jpg" alt="リラックスしている女性" class="hero-image" loading="lazy">
+      <a href="#campaign" class="cta-button scroll">あなたの #わたしのお酒時間 を見つけよう</a>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="container story-flex">
+      <div class="story-text">
+        <h3>日常に寄り添う小さなひととき</h3>
+        <p>忙しい日々のなかで、自分だけの時間を楽しむ…。<br>読書や音楽、料理の合間に少しだけ、自分を甘やかす瞬間を。</p>
+      </div>
+      <div class="story-image">
+        <img src="images/reading.jpg" alt="読書とグラス" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="situations">
+    <div class="container">
+      <h3 class="section-title">シチュエーション別の楽しみ方</h3>
+      <div class="card-grid">
+        <div class="card">
+          <img src="images/redwine.jpg" alt="読書 × 赤ワイン" loading="lazy">
+          <h4>読書 × 赤ワイン</h4>
+          <p>ページをめくる音と深みの香り</p>
+        </div>
+        <div class="card">
+          <img src="images/whitewine.jpg" alt="映画 × 白ワイン" loading="lazy">
+          <h4>映画 × 白ワイン</h4>
+          <p>スクリーン越しに感じる爽やかさ</p>
+        </div>
+        <div class="card">
+          <img src="images/sparkling.jpg" alt="音楽 × スパークリング" loading="lazy">
+          <h4>音楽 × スパークリング</h4>
+          <p>心とリズムをゆらす泡の魔法</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="campaign" id="campaign">
+    <div class="container">
+      <h3 class="section-title">参加型キャンペーン</h3>
+      <p>あなたの“ひととき”を投稿しよう<br>#わたしのお酒時間 をつけてInstagramに投稿！</p>
+      <div class="insta-mock">
+        <img src="images/insta_mock.jpg" alt="Instagram投稿モック" loading="lazy">
+      </div>
+      <a href="#" class="cta-button">投稿する</a>
+      <div class="share-buttons">
+        <a href="#">Xでシェア</a>
+        <a href="#">Instagramでシェア</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="conversion">
+    <div class="container">
+      <p class="message">次の“お酒時間”、どんなふうに過ごす？</p>
+      <div class="cta-group">
+        <a href="#" class="cta-button">おすすめペアリングを見る</a>
+        <a href="#" class="cta-button">自分の#お酒時間をシェアする</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo">わたしのお酒時間</p>
+      <p>このサイトは架空の広告です。特定商品を勧めるものではありません。</p>
+      <div class="footer-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">X</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a.scroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

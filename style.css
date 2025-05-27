@@ -1,0 +1,230 @@
+/* 共通スタイル */
+body {
+  margin: 0;
+  font-family: 'Yu Gothic', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ヘッダー */
+.header {
+  padding: 20px 0;
+  background-color: #fff0f5;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b35b7a;
+}
+
+/* ファーストビュー */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fffafc;
+}
+
+.main-copy {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  color: #7a3e4e;
+}
+
+.sub-copy {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
+.hero-image {
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #b35b7a;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #993f60;
+}
+
+/* ストーリーセクション */
+.story {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.story-flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-text h3 {
+  font-size: 1.5rem;
+  color: #b35b7a;
+  margin-bottom: 0.5em;
+}
+
+.story-text p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* シチュエーションカード */
+.situations {
+  padding: 60px 20px;
+  background-color: #fef6f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #b35b7a;
+  margin-bottom: 2em;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 16px;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin: 0.8em 0 0.3em;
+  color: #7a3e4e;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* キャンペーン */
+.campaign {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.share-buttons a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #b35b7a;
+  font-weight: bold;
+}
+
+/* コンバージョン */
+.conversion {
+  padding: 60px 20px;
+  background-color: #fffafc;
+  text-align: center;
+}
+
+.message {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 1.2em;
+}
+
+.cta-group a {
+  margin: 10px;
+}
+
+/* フッター */
+.footer {
+  padding: 40px 20px;
+  background-color: #f8e9ee;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.footer-links a {
+  color: #b35b7a;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* レスポンシブ */
+@media (max-width: 1024px) {
+  .story-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-copy {
+    font-size: 1.5rem;
+  }
+
+  .sub-copy {
+    font-size: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
