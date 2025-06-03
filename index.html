@@ -1,145 +1,215 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="“ひとり”を、“ひととき”に変える。忙しい日常の中で味わう、お酒との静かな時間を提案する架空のライフスタイルLP。">
-  <meta name="keywords" content="お酒, ワイン, ライフスタイル, リラックス, 一人時間" />
-  <meta name="author" content="わたしのお酒時間" />
-  <title>#わたしのお酒時間｜架空LP</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
-  <!-- GTM / GA4タグ（例） -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お酒のあるひととき</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ヘッダー -->
-  <header class="header">
-    <h1 class="logo">わたしのお酒時間</h1>
-  </header>
-
   <!-- ファーストビュー -->
-  <section class="hero" id="top">
-    <h2 class="main-copy">“ひとり”を、“ひととき”に変える魔法。</h2>
-    <p class="sub-copy">一日の終わりに、ささやかな贅沢を。</p>
-    <img
-      src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
-      alt="リラックスしたお酒時間"
-      class="hero-image"
-      loading="lazy"
-    />
-    <a href="#situations" class="cta-button smooth-scroll" aria-label="あなたの #わたしのお酒時間 を見つけよう">あなたの #わたしのお酒時間 を見つけよう</a>
+  <section class="hero">
+    <video class="hero-bg" autoplay muted loop playsinline>
+      <source src="video/bg-video.webm" type="video/webm">
+      <source src="video/bg-video.mp4" type="video/mp4">
+      お使いのブラウザは動画に対応していません。
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>“ひとり”を、“ひととき”に変える魔法。</h1>
+      <p>今日の終わりに、小さな幸せを。</p>
+    </div>
   </section>
+  <div id="gradient-wrapper">
 
-  <!-- ストーリーセクション -->
-  <section class="story" id="story">
-    <div class="story-container">
-      <div class="story-text">
-        <h3>一人の時間を大切にするあなたへ</h3>
-        <p>静かな夜、ほんの少しの音楽とお気に入りのグラス。誰かと過ごす時間も良いけれど、自分だけのために注ぐ一杯は格別。</p>
+  <section class="story-section">
+  <div class="story-overlay"></div>
+  <div class="story-content">
+    <blockquote>今日はちょっと疲れた。誰かと話す気分じゃない…</blockquote>
+    <blockquote>冷蔵庫から1本のお酒を取り出して、灯りを落とす。</blockquote>
+    <blockquote>口に含んだ瞬間、肩の力がふっと抜けた。これが、私の一番好きな時間。</blockquote>
+  </div>
+</section>
+<section class="situation-section">
+  <h2 class="section-title">こんな夜に、こんな一杯</h2>
+  <div class="card-container">
+    <div class="situation-card">
+      <img src="images/red_wine.jpg" alt="赤ワイン">
+      <div class="card-info">
+        <h3>読書 × 赤ワイン</h3>
+        <p>落ち着きたい夜に</p>
+        <button class="card-cta">この一杯を試してみる</button>
       </div>
-      <div class="story-image">
-        <img
-          src="https://images.unsplash.com/photo-1510626176961-4b54a36b0b6b?auto=format&fit=crop&w=600&q=80"
-          alt="本と音楽とお酒"
-          loading="lazy"
-        />
+    </div>
+    <div class="situation-card">
+      <img src="images/beer.jpg" alt="クラフトビール">
+      <div class="card-info">
+        <h3>音楽 × クラフトビール</h3>
+        <p>気分転換したい夜に</p>
+        <button class="card-cta">この一杯を試してみる</button>
       </div>
     </div>
-  </section>
-
-  <!-- シチュエーション提案カード -->
-  <section class="situations fade-in" id="situations">
-    <h3 class="section-title">おすすめの“ひととき”</h3>
-    <div class="card-grid">
-      <article class="card">
-        <img
-          src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=400&q=80"
-          alt="読書と赤ワイン"
-          loading="lazy"
-        />
-        <h4>読書 × 赤ワイン</h4>
-        <p>ページをめくる音と深みの香り</p>
-        <a href="#" class="link-more">もっと見る</a>
-      </article>
-      <article class="card">
-        <img
-          src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=400&q=80"
-          alt="音楽とウイスキー"
-          loading="lazy"
-        />
-        <h4>音楽 × ウイスキー</h4>
-        <p>余韻を楽しむ夜のプレイリスト</p>
-        <a href="#" class="link-more">もっと見る</a>
-      </article>
-      <article class="card">
-        <img
-          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80"
-          alt="映画とクラフトビール"
-          loading="lazy"
-        />
-        <h4>映画 × クラフトビール</h4>
-        <p>画面越しの世界とホップの香り</p>
-        <a href="#" class="link-more">もっと見る</a>
-      </article>
+    <div class="situation-card">
+      <img src="images/sake.jpg" alt="日本酒">
+      <div class="card-info">
+        <h3>映画 × 日本酒</h3>
+        <p>感性を解放したい夜に</p>
+        <button class="card-cta">この一杯を試してみる</button>
+      </div>
     </div>
-  </section>
-
-  <!-- 参加型キャンペーン -->
-  <section class="campaign fade-in" id="campaign">
-    <h3 class="section-title">あなたの“ひととき”を投稿しよう</h3>
-    <div class="insta-mock">
-      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="ユーザー投稿1" loading="lazy" />
-      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=400&q=80" alt="ユーザー投稿2" loading="lazy" />
+    <div class="situation-card">
+      <img src="images/sparkling.jpg" alt="スパークリングワイン">
+      <div class="card-info">
+        <h3>お風呂 × スパークリング</h3>
+        <p>癒されたい夜に</p>
+        <button class="card-cta">この一杯を試してみる</button>
+      </div>
     </div>
-    <div class="campaign-cta">
-      <a href="#" class="cta-button open-modal">投稿する</a>
-      <a href="#" class="cta-button">みんなの投稿を見る</a>
-    </div>
-    <div class="share-buttons">
-      <a href="#" aria-label="Xでシェア" class="share-btn">Xでシェア</a>
-      <a href="#" aria-label="Instagramでシェア" class="share-btn">Instagramでシェア</a>
-    </div>
-  </section>
+  </div>
+</section>
+<!-- 診断セクション -->
+<section id="diagnosis" class="diagnosis-section">
+  <h2>今夜のあなたに、ぴったりの一杯は？</h2>
+  <button id="startDiagnosisBtn" class="cta-button">あなたにぴったりのお酒時間を診断</button>
+</section>
+<section class="ugc-section" id="ugc">
+  <h2>#わたしのお酒時間 をシェアしよう</h2>
 
-  <!-- コンバージョン誘導 -->
-  <section class="conversion fade-in" id="conversion">
-    <h3 class="section-title">次の“お酒時間”、どんなふうに過ごす？</h3>
-    <div class="conversion-ctas">
-      <a href="#" class="cta-button">おすすめペアリングを見る</a>
-      <a href="#" class="cta-button">自分の#お酒時間をシェアする</a>
-    </div>
-  </section>
+  <div class="ugc-slider">
+    <div class="ugc-slide"><img src="images/ugc1.jpg" alt="ユーザー投稿1"></div>
+    <div class="ugc-slide"><img src="images/ugc2.jpg" alt="ユーザー投稿2"></div>
+    <div class="ugc-slide"><img src="images/ugc3.jpg" alt="ユーザー投稿3"></div>
+    <!-- 必要に応じて追加 -->
+  </div>
 
-  <!-- フッター -->
-  <footer class="footer">
-    <p>&copy; 2025 わたしのお酒時間</p>
-    <p class="disclaimer">※このサイトは架空の広告です。特定商品を勧めるものではありません。</p>
-    <nav class="footer-links" aria-label="フッターリンク">
-      <a href="#">プライバシーポリシー</a>
-      <a href="#">Instagram</a>
-      <a href="#">X</a>
-    </nav>
-  </footer>
+  <div class="ugc-buttons">
+    <button id="viewPostsBtn">#わたしのお酒時間 を見る</button>
+    <button id="submitPostBtn">あなたも投稿して参加しよう</button>
+  </div>
+</section>
+<section class="final-cta">
+  <h2>今夜の一杯、もう一度見つけてみませんか？</h2>
+  <button id="retryDiagnosisBtn" onclick="scrollToDiagnosis()">もう一度、診断する</button>
+</section>
 
-  <script src="script.js"></script>
-  <div id="modal" class="modal">
+<footer class="site-footer">
+  <p>このLPは架空の広告です。特定商品を勧めるものではありません。</p>
+  <div class="social-icons">
+    <a href="#"><img src="images/icon-x.svg" alt="X (旧Twitter)"></a>
+    <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+  </div>
+</footer>
+</div>
+
+<!-- 投稿フォームモーダル -->
+<div id="ugcModal" class="modal">
   <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <h2>投稿フォーム（仮）</h2>
-    <p>ここに投稿フォームや案内を入れます。</p>
+    <span class="close" id="closeUgcModal">&times;</span>
+    <h3>#わたしのお酒時間 投稿フォーム</h3>
+    <form id="ugcForm">
+      <label for="userName">お名前（ニックネーム可・任意）</label>
+      <input type="text" id="userName" name="userName" placeholder="例：ゆうこ／YUKO">
+
+      <label for="comment">コメント（必須）</label>
+      <textarea id="comment" name="comment" rows="4" placeholder="あなたの素敵なお酒時間をシェアしてください。" required></textarea>
+
+      <label for="category">お酒のジャンル（選択）</label>
+      <select id="category" name="category">
+        <option value="">選択してください</option>
+        <option value="wine">ワイン</option>
+        <option value="beer">ビール</option>
+        <option value="sake">日本酒</option>
+        <option value="whisky">ウイスキー</option>
+        <option value="cocktail">カクテル</option>
+        <option value="other">その他</option>
+      </select>
+
+      <label for="photo">写真を添付（任意）</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+
+      <button type="submit" class="cta-button">投稿する</button>
+    </form>
   </div>
 </div>
+
+
+
+<!-- 診断モーダル -->
+<div id="diagnosisModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h3>診断スタート</h3>
+    <form id="diagnosisForm">
+      <label>今日はどんな気分？</label>
+      <select id="mood">
+        <option value="relax">リラックスしたい</option>
+        <option value="refresh">気分転換したい</option>
+        <option value="inspire">刺激が欲しい</option>
+        <option value="heal">癒されたい</option>
+      </select>
+
+      <label>どんな時間を過ごしたい？</label>
+      <select id="activity">
+        <option value="book">読書</option>
+        <option value="music">音楽</option>
+        <option value="movie">映画</option>
+        <option value="bath">お風呂</option>
+      </select>
+
+      <button type="submit">診断する</button>
+    </form>
+
+    <div id="diagnosisResult" class="result hidden">
+      <h4>あなたにおすすめの過ごし方</h4>
+      <p id="resultText"></p>
+      <img id="resultImage" src="" alt="" />
+      <div class="result-ctas">
+        <a id="externalLink" class="cta-button" href="#" target="_blank">おすすめワインを見る</a>
+        <button class="cta-button" id="shareBtn">SNSでシェア</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const quotes = document.querySelectorAll(".story-content blockquote");
+    quotes.forEach((quote, index) => {
+      setTimeout(() => {
+        quote.style.opacity = 1;
+        quote.style.transform = "translateY(0)";
+      }, index * 2000); // 2秒ごとに1文ずつフェードイン
+    });
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+  // モーダル要素取得
+  const diagnosisModal = document.getElementById("diagnosisModal");
+  const startBtn = document.getElementById("startDiagnosisBtn");
+  const closeBtn = document.getElementById("closeModal");
+
+  // 診断ボタンをクリック → モーダル表示
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      diagnosisModal.style.display = "block";
+    });
+  }
+
+  // 閉じるボタンをクリック → モーダル非表示
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      diagnosisModal.style.display = "none";
+    });
+  }
+
+  // モーダル外をクリックしたら閉じる
+  window.addEventListener("click", (e) => {
+    if (e.target === diagnosisModal) {
+      diagnosisModal.style.display = "none";
+    }
+  });
+});
+
+</script>
+<script src="script.js"></script>
 </body>
 </html>
-
