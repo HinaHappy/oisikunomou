@@ -8,7 +8,7 @@ body {
   background: linear-gradient(to bottom,#22223b,#4a4e69,#726d81,#b2abb3,#f2e9e4);
   min-height: 100vh;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'DramaticMincho', serif;
   line-height: 1.6;
 }
 
@@ -149,7 +149,7 @@ body {
 .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #4a5759;
+  color: #fdfefe;
 }
 
 .card-container {
@@ -566,3 +566,22 @@ body {
   border: 1px solid #ccc;
   background: rgba(255, 255, 255, 0.9);
 }
+@font-face {
+  font-family: 'DramaticMincho';
+ src: url('../fonts/Dorama.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KokoroMincho';
+  src: url('/fonts/Kokoro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.kokoro-font {
+  font-family: 'KokoroMincho', serif;
+}
+.dramatic-font{
+    font-family: 'DramaticMincho', serif;
+  }
