@@ -568,14 +568,14 @@ body {
 }
 @font-face {
   font-family: 'DramaticMincho';
- src: url('../fonts/Dorama.ttf') format('truetype');
+ src: url('./fonts/Dorama.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'KokoroMincho';
-  src: url('/fonts/Kokoro.otf') format('opentype');
+  src: url('./fonts/Kokoro.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
