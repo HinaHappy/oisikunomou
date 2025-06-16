@@ -7,17 +7,22 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+//診断モーダル設定
+
 document.querySelectorAll('.situation-card').forEach(card => {
   card.classList.add('before-slide'); // 初期状態
   observer.observe(card);
 });
 document.getElementById("startDiagnosisBtn").addEventListener("click", function () {
-  document.getElementById("diagnosisModal").style.display = "flex";
+  const modal = document.getElementById("diagnosisModal");
+  modal.classList.add("active");
+});
+document.getElementById("closeModal").addEventListener("click", function () {
+  const modal = document.getElementById("diagnosisModal");
+  modal.classList.remove("active");
 });
 
-document.getElementById("closeModal").addEventListener("click", function () {
-  document.getElementById("diagnosisModal").style.display = "none";
-});
+
 document.getElementById("diagnosisForm").addEventListener("submit", function(e) {
   e.preventDefault(); // フォームの送信を止める
 
@@ -110,11 +115,14 @@ document.getElementById('diagnosisForm').addEventListener('submit', function (e)
   const externalLink = document.getElementById('externalLink');
   // グラデーション背景ラッパーのCSSは外部CSSファイルまたは<style>タグに記述してください
 
-  document.getElementById('shareBtn').addEventListener('click', () => {
-    const text = encodeURIComponent("今夜の一杯を診断しました！ #わたしのお酒時間");
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
-  });
+
+document.getElementById("shareBtn").addEventListener("click", function () {
+  const ugcModal = document.getElementById("ugcModal");
+  if (ugcModal) {
+    ugcModal.style.display = "flex"; // 表示する
+  }
+});
+
 
 }); // ← 修正: 閉じ忘れた関数の終了
 // 「もう一度、診断する」ボタンでモーダルを再表示
@@ -139,3 +147,16 @@ document.getElementById("ugcForm").addEventListener("submit", function (e) {
 document.getElementById("closeUgcModal").addEventListener("click", function () {
   document.getElementById("ugcModal").style.display = "none";
 });
+
+// 全ての .card-cta ボタンにイベントを追加
+document.querySelectorAll('.card-cta').forEach(function (button) {
+  button.addEventListener('click', function () {
+    const ctaId = button.getAttribute('data-cta'); // card1, card2, etc.
+    gtag('event', 'cta_click', {
+      'event_category': 'CTA',
+      'event_label': ctaId
+    });
+  });
+});
+
+

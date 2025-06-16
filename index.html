@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お酒のあるひととき</title>
+  <title>“ひとり”を、“ひととき”に変える魔法｜わたしのお酒時間 診断コンテンツ</title>
+<meta name="description" content="たった3つの質問で、あなたにぴったりの“お酒時間”を診断。今日の気分や過ごし方に合わせて、おすすめの一杯をご提案します。#わたしのお酒時間 を投稿して参加しよう！">
+  <meta name="keywords" content="お酒,診断,リラックス,ビール,ワイン,日本酒,カクテル,お酒時間,ひとり時間">
+  <meta name="author" content="齋藤陽菜">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,11 +41,11 @@
   <h2 class="section-title">そんな夜に、こんな一杯</h2>
   <div class="card-container">
     <div class="situation-card">
-      <img src="https://github.com/HinaHappy/oisikunomou/blob/main/images/red_wine.jpg?raw=true" alt="赤ワイン">
+      <img src="images/red_wine.jpg" alt="赤ワイン">
       <div class="card-info">
         <h3>読書 × 赤ワイン</h3>
         <p>落ち着きたい夜に</p>
-        <button class="card-cta">この一杯を試してみる</button>
+        <button class="card-cta"  onclick="fakeRedirect()" data-cta="card1">この一杯を試してみる</button>
       </div>
     </div>
     <div class="situation-card">
@@ -50,7 +53,7 @@
       <div class="card-info">
         <h3>音楽 × クラフトビール</h3>
         <p>気分転換したい夜に</p>
-        <button class="card-cta">この一杯を試してみる</button>
+        <button class="card-cta"  onclick="fakeRedirect()" data-cta="card2">この一杯を試してみる</button>
       </div>
     </div>
     <div class="situation-card">
@@ -58,7 +61,7 @@
       <div class="card-info">
         <h3>映画 × 日本酒</h3>
         <p>感性を解放したい夜に</p>
-        <button class="card-cta">この一杯を試してみる</button>
+        <button class="card-cta"  onclick="fakeRedirect()" data-cta="card3">この一杯を試してみる</button>
       </div>
     </div>
     <div class="situation-card">
@@ -66,7 +69,7 @@
       <div class="card-info">
         <h3>お風呂 × スパークリング</h3>
         <p>癒されたい夜に</p>
-        <button class="card-cta">この一杯を試してみる</button>
+        <button class="card-cta"  onclick="fakeRedirect()" data-cta="card4">この一杯を試してみる</button>
       </div>
     </div>
   </div>
@@ -80,27 +83,32 @@
   <h2>#わたしのお酒時間 をシェアしよう</h2>
 
   <div class="ugc-slider">
-    <div class="ugc-slide"><img src="images/ugc1.jpg" alt="ユーザー投稿1"></div>
-    <div class="ugc-slide"><img src="images/ugc2.jpg" alt="ユーザー投稿2"></div>
-    <div class="ugc-slide"><img src="images/ugc3.jpg" alt="ユーザー投稿3"></div>
+    <div class="ugc-slide"><img src="images/ugc1.png" alt="ユーザー投稿1"></div>
+    <div class="ugc-slide"><img src="images/ugc2.png" alt="ユーザー投稿2"></div>
+    <div class="ugc-slide"><img src="images/ugc3.png" alt="ユーザー投稿3"></div>
+    <div class="ugc-slide"><img src="images/ugc4.png" alt="ユーザー投稿4"></div>
+    <div class="ugc-slide"><img src="images/ugc1.png" alt="ユーザー投稿5"></div>
+    <div class="ugc-slide"><img src="images/ugc2.png" alt="ユーザー投稿6"></div>
+    <div class="ugc-slide"><img src="images/ugc3.png" alt="ユーザー投稿7"></div>
+    <div class="ugc-slide"><img src="images/ugc4.png" alt="ユーザー投稿8"></div>
     <!-- 必要に応じて追加 -->
   </div>
 
   <div class="ugc-buttons">
-    <button id="viewPostsBtn">#わたしのお酒時間 を見る</button>
-    <button id="submitPostBtn">あなたも投稿して参加しよう</button>
+    <button id="viewPostsBtn" class="cta-button">#わたしのお酒時間 を見る</button>
+    <button id="submitPostBtn" class="cta-button">あなたも投稿して参加しよう</button>
   </div>
 </section>
 <section class="final-cta">
   <h2>今夜の一杯、もう一度見つけてみませんか？</h2>
-  <button id="retryDiagnosisBtn" onclick="scrollToDiagnosis()">もう一度、診断する</button>
+  <button id="retryDiagnosisBtn" onclick="scrollToDiagnosis()"class="cta-button">もう一度、診断する</button>
 </section>
 
 <footer class="site-footer">
   <p>このLPは架空の広告です。特定商品を勧めるものではありません。</p>
   <div class="social-icons">
-    <a href="#"><img src="images/icon-x.svg" alt="X (旧Twitter)"></a>
-    <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+    <a href="#"><img src="images/icon-x.jpg" alt="X (旧Twitter)"></a>
+    <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
   </div>
 </footer>
 </div>
@@ -160,20 +168,68 @@
         <option value="bath">お風呂</option>
       </select>
 
-      <button type="submit">診断する</button>
+      <button type="submit" class="cta-button">診断する</button>
     </form>
 
     <div id="diagnosisResult" class="result hidden">
       <h4>あなたにおすすめの過ごし方</h4>
       <p id="resultText"></p>
-      <img id="resultImage" src="" alt="" />
+      <img id="resultImage" src="" alt="" >
       <div class="result-ctas">
-        <a id="externalLink" class="cta-button" href="#" target="_blank">おすすめワインを見る</a>
-        <button class="cta-button" id="shareBtn">SNSでシェア</button>
+        <a id="externalLink" class="cta-button" href="#" target="_blank">おすすめ商品を見る</a>
+        <button  id="shareBtn" class="cta-button">SNSでシェア</button>
       </div>
     </div>
   </div>
 </div>
+<!-- ハンバーガーメニュー -->
+<header>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="#top">トップ</a></li>
+      <li><a href="#" id="openDiagnosisFromMenu">おすすめ診断</a></li>
+      <li><a href="#ugc">みんなの投稿</a></li>
+      <li><a href="#footer">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+</header>
+
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("overlay");
+
+  function toggleMenu() {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
+
+  // ▼ 診断リンク → モーダルを開く
+  const openDiagnosisFromMenu = document.getElementById("openDiagnosisFromMenu");
+  const diagnosisModal = document.getElementById("diagnosisModal");
+
+  openDiagnosisFromMenu.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleMenu(); // メニューを閉じる
+    diagnosisModal.classList.add("show"); // 表示用クラスを追加（CSSと対応）
+  });
+</script>
+
+
+
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -216,4 +272,85 @@
 </script>
 <script src="script.js"></script>
 </body>
-</html>
+</html><script>
+function fakeRedirect() {
+  alert("おすすめページに移動します…");
+  setTimeout(() => {
+    window.location.href = "https://example.com/fake-wine-page1";
+  }, 1500); // 1.5秒後に遷移
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCZ0XFYPMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FCZ0XFYPMR');
+</script>
+
+<script>
+  // GA4イベント送信関数
+  function sendGAEvent(name, label) {
+    gtag('event', name, {
+      event_category: 'CTA',
+      event_label: label
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const events = [
+      { id: 'startDiagnosisBtn', name: 'click_start_diagnosis', label: '診断スタート' },
+      { id: 'viewPostsBtn', name: 'click_view_posts', label: '投稿一覧を見る' },
+      { id: 'submitPostBtn', name: 'click_submit_prompt', label: '投稿呼びかけボタン' },
+      { id: 'retryDiagnosisBtn', name: 'click_retry_diagnosis', label: '再診断ボタン' },
+      { id: 'submitFormBtn', name: 'submit_post_form', label: '投稿送信' },
+      { id: 'submitDiagnosisBtn', name: 'submit_diagnosis_form', label: '診断送信' },
+      { id: 'externalLink', name: 'click_recommend_product', label: 'おすすめ商品CTA' },
+      { id: 'shareBtn', name: 'click_share', label: 'SNSシェア' }
+    ];
+
+    events.forEach(({ id, name, label }) => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('click', () => {
+          sendGAEvent(name, label);
+        });
+      }
+    });
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "わたしのお酒時間診断",
+  "url": "https://hinahappy.github.io/oisikunomou/",
+  "description": "“ひとり”を、“ひととき”に変える魔法。今日の終わりに、小さな幸せを見つける「お酒時間」診断。",
+  "inLanguage": "ja",
+  "mainEntity": {
+    "@type": "Article",
+    "headline": "あなたにぴったりの“お酒時間”を診断",
+    "image": "https://hinahappy.github.io/oisikunomou/images/ogp.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "齋藤陽菜",
+      "url": "https://www.asahi.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "齋藤陽菜",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.asahi.com/favicon.ico"
+      }
+    },
+    "datePublished": "2025-06-01",
+    "dateModified": "2025-06-06"
+  }
+}
+</script>
+
